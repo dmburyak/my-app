@@ -53,7 +53,6 @@ export class AuthComponent implements OnDestroy {
 
     authObs.subscribe(
       resData => {
-        console.log(resData);
         this.isLoading = false;
         this.router.navigate(['/recipes']);
       },
@@ -79,7 +78,6 @@ export class AuthComponent implements OnDestroy {
   }
 
   private showErrorAlert(message: string) {
-    // const alertCmp = new AlertComponent();
     const alertCmpFactory = this.componentFactoryResolver.resolveComponentFactory(
       AlertComponent
     );
